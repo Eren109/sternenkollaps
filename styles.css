@@ -1,0 +1,453 @@
+body {
+    background-image: url('assets/supernova-zombie-stern.png');
+    background-position: 50% 50%;
+    background-size: 1920px 1200px;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+.heading {
+    grid-area: header;
+    margin: auto;
+    padding: 80px;
+    background-color: transparent;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background-color: #000;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 80px;
+    float: left;
+    margin: 27px 20px 0 0;
+    text-shadow: 0 0 5px white;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.boxanimation {
+    grid-area: loadindbox;
+}
+
+.animationStar {
+    grid-area: animationbox;
+    position: relative;
+}
+
+.buttons {
+    grid-area: buttonbox;
+}
+
+.periodictable {
+    grid-area: periodicsystembox;
+    text-align: center;
+}
+
+.periodictable img {
+    width: 750px;
+}
+
+.explanation {
+    grid-area: explanationbox;
+}
+
+.legend {
+    grid-area: legende;
+}
+
+.legendforpicture {
+    grid-area: picturelegend;
+}
+
+.loadingbox {
+    grid-area: load;
+}
+
+.grid-container {
+    display: grid;
+    /*grid-template-rows: 130px 200px 150px 473px;*/
+    grid-template-areas: 'header header header header' 'animationbox periodicsystembox periodicsystembox periodicsystembox' 'animationbox buttonbox buttonbox buttonbox' 'animationbox explanationbox explanationbox explanationbox' 'legende legende legende  picturelegend' 'load load load load';
+    grid-gap: 7px;
+    padding: 0 135px
+}
+
+
+/*.grid-background-fixed {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}*/
+
+
+/*
+@media (min-width: 1025px) {
+    .grid-background-fixed {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}*/
+
+.grid-container>div {
+    padding: 25px;
+    font-family: sans-serif;
+    font-size: 21px;
+}
+
+.boxanimation {
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.animationStar {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.buttons {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.periodictable {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.explanation {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: justify;
+}
+
+.legend {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.legendforpicture {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.loadingbox {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.explanation img {
+    float: right;
+    width: 200px;
+    padding: 0 0 30px 24px;
+}
+
+.animationStar {
+    position: relative;
+    border: 1px solide rgb(255, 255, 255);
+    display: flex;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnImplosion {
+    padding: 13px 22px;
+    color: #171717;
+    font-size: 20px;
+    display: table;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    line-height: 28px;
+    border: 2px solid #171717;
+    background-image: linear-gradient(to right, #171717 50%, transparent 50%);
+    background-position: 100% 0%;
+    background-size: 200% 100%;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.btnImplosion:hover {
+    color: #f3f3f3;
+    background-position: 0% 50%;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btnMergeElements {
+    display: block;
+    width: 200px;
+    padding: 0px;
+    color: #171717;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid #171717;
+    background-image: linear-gradient(to right, #171717 50%, transparent 50%);
+    background-position: 100% 0%;
+    background-size: 200% 100%;
+    transition: 0.8s;
+}
+
+.btnMergeElements:hover {
+    color: #f3f3f3;
+    background-position: 0% 50%;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.preloader {
+    margin-bottom: 60px;
+}
+
+.preloader .blocks {
+    margin: auto;
+    position: center;
+    width: 70px;
+    height: 70px;
+    animation: rotate 5s ease-in-out infinite;
+}
+
+.preloader .blocks .block {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: all 0.5s linear;
+}
+
+.preloader .blocks .block:nth-child(1) {
+    top: 0px;
+    left: 40px;
+    background-color: #ffffff;
+}
+
+.preloader .blocks .block:nth-child(2) {
+    top: 0px;
+    left: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.preloader .blocks .block:nth-child(3) {
+    top: 40px;
+    left: 0px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+#star {
+    margin: auto;
+    position: relative;
+    background-color: rgb(255, 251, 5);
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 150px;
+}
+
+#elements {
+    display: inline-block;
+    left: 38px;
+    top: 193px;
+    background-color: #ff1b1b;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #171717;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#elements2 {
+    display: inline-block;
+    left: 39px;
+    top: 230px;
+    position: absolute;
+    background-color: #ff1b1b;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #171717;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#elements3 {
+    display: inline-block;
+    left: 39px;
+    top: 272px;
+    position: absolute;
+    background-color: #ff1b1b;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #171717;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#elements4 {
+    display: inline-block;
+    left: 39px;
+    top: 308px;
+    position: absolute;
+    background-color: #ff1b1b;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #171717;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#elements5 {
+    display: inline-block;
+    left: 97px;
+    top: 354px;
+    position: absolute;
+    background-color: #ff1b1b;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #171717;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#elements6 {
+    display: inline-block;
+    left: 62px;
+    top: 354px;
+    position: absolute;
+    background-color: #ff1b1b;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #171717;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#elements7 {
+    display: inline-block;
+    left: 100px;
+    top: 154px;
+    position: absolute;
+    background-color: #ff1b1b;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #171717;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.elements8 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #171717;
+    left: 100px;
+    top: 154px;
+    background-color: blue;
+    border-radius: 10px;
+    animation-name: fusion;
+    animation-duration: 3s;
+    position: absolute;
+    animation-iteration-count: 1;
+}
+
+@keyframes fusion {
+    0% {
+        left: 62px;
+        background-color: #ff1b1b;
+    }
+    100% {
+        left: 100px;
+        top: 155px;
+        background-color: blue;
+    }
+}
+
+.elems-container {
+    position: relative;
+    width: 94px;
+    height: 94px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.elems {
+    height: 24px;
+    width: 30px;
+    transition: all 0.5s linear;
+    border: 1px solid #000;
+    border-radius: 15px;
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-top: 6px;
+}
+
+.elems-left {
+    left: 0px;
+}
+
+.elems-right {
+    left: 60px;
+}
+
+.elems-row1 {
+    top: 0px;
+}
+
+.elems-row2 {
+    top: 60px;
+}
+
+.image-resize {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.element-h {
+    background-color: #84ff9b;
+    z-index: 100;
+}
+
+.element-h:after {
+    padding-top: 2px;
+    padding-left: 1px;
+    content: "H";
+}
+
+.element-he {
+    background-color: #c4a0ff;
+    z-index: 101;
+}
+
+.element-he:after {
+    padding-top: 2px;
+    padding-left: 1px;
+    content: "HE";
+}
+
+.element-li {
+    background-color: #ff7a7e;
+    z-index: 102;
+}
+
+.element-li:after {
+    padding-top: 2px;
+    padding-left: 1px;
+    content: "LI";
+}

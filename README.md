@@ -1,3 +1,7 @@
-# sternenkollaps
+# simple static nginx docker
+```php
+docker-compose build
+docker-compose up
+```
 
-yeeeha ...
+open http://localhost:8000
